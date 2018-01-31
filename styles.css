@@ -67,6 +67,7 @@ nav ul {
 
 nav li {
   display: inline;
+  float: left;
 }
 
 nav li a {
@@ -83,4 +84,21 @@ nav li a:hover:not(.active) {
 
 .active {
   background-color: red;
+}
+
+.search {
+  float: right;
+}
+
+.search input {
+  padding: 6px;
+  margin-top: 8px;
+}
+
+.search button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  cursor: pointer;
 }
