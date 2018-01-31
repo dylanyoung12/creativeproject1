@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit Rating</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <h1>RateMyRoomate</h1>
+
+  <div class="container">
+    <nav class="header">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="login.html">Login / Register</a></li>
+        <li><a class="active" href="rate.html">Rate</a></li>
+        <li class="search">
+          <div>
+            <input type="text" placeholder="Search...">
+            <button type="submit">Submit</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+
+    </div>
+    <div class="main">
+      <h2>Submit a Rating</h2>
+      <hr>
+      <form class="rate">
+        <label>Name:</label>
+        <input type="text" placeholder="Roommate's Name" name="name" required>
+        <label>City:</label>
+        <input type="text" placeholder="City of Residence" name="school">
+        <label>Overall Rating:</label>
+        <div class="slidercontainer">
+          <span>Worst</span>
+          <input class="slider" type="range" min="1" max="5" value="1">
+          <span>Best</span>
+        </div>
+        <label>Friendliness:</label>
+        <div class="slidercontainer">
+          <span>Worst</span>
+          <input class="slider" type="range" min="1" max="5" value="1">
+          <span>Best</span>
+        </div>
+        <label>Cleanliness:</label>
+        <div class="slidercontainer">
+          <span>Worst</span>
+          <input class="slider" type="range" min="1" max="5" value="1">
+          <span>Best</span>
+        </div>
+        <label>Does Dishes:</label>
+        <div class="radiocontainer">
+          <input type="radio" name="dishes" value="yes"> Yes &emsp;
+          <input type="radio" name="dishes" value="no" checked> No
+        </div>
+        <label>Snores:</label>
+        <div class="radiocontainer">
+          <input type="radio" name="snores" value="yes"> Yes &emsp;
+          <input type="radio" name="snores" value="no" checked> No
+        </div>
+        <label>Late Nights:</label>
+        <div class="radiocontainer">
+          <input type="radio" name="late" value="yes"> Yes &emsp;
+          <input type="radio" name="late" value="no" checked> No
+        </div>
+        <label>Fun:</label>
+        <div class="radiocontainer">
+          <input type="radio" name="fun" value="yes"> Yes &emsp;
+          <input type="radio" name="fun" value="no" checked> No
+        </div>
+        <img id="chili" src="../images/chili2.svg">
+        <div class="radiocontainer">
+          <input type="radio" name="hot" value="yes"> Yes &emsp;
+          <input type="radio" name="hot" value="no" checked> No
+        </div>
+      </form>
+    </div>
+    <div class="footer">
+      <br>
+      <hr>
+      <p>Repository: <a href="https://github.com/dylanyoung12/creativeproject1">
+        https://github.com/dylanyoung12/creativeproject1</a></p>
+      </div>
+    </div>
+
+
+
+  </body>
+  </html>
