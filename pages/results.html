@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Search Results</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <nav class="header">
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a class="active" href="login.html">Login / Register</a></li>
+        <li><a href="login.html">Login / Register</a></li>
         <li><a href="rate.html">Rate</a></li>
         <li class="search">
           <div>
@@ -27,16 +27,18 @@
 
     </div>
     <div class="main">
-      <h2>Log In</h2>
+      <h2>Results</h2>
       <hr>
-      <form class="login">
-        <input type="text" placeholder="Username" name="uname">
-        <input type="password" placeholder="Password" name="pswd">
-        <div>
-          <button type="submit">Login</button>
-          <a id="register" href="register.html"><button type="button">Don't have an account? Sign up!</button></a>
-        </div>
-      </form>
+      <p>Your search returned 1 result</p>
+      <br>
+      <div class="results">
+        <a href="ratings/dylanyoung.html">
+          <div class="searchresult">
+            <h3>Dylan<br />Young</h3>
+            <img src="../images/young07.jpg">
+          </div>
+        </a>
+      </div>
     </div>
     <div class="footer">
       <br>

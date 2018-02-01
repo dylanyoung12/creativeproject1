@@ -99,7 +99,7 @@ nav li a:hover:not(.active) {
   width: 250px;
 }
 
-.search a {
+.search button {
   float: right;
   padding: 6px;
   margin-top: 8px;
@@ -238,112 +238,4 @@ Submit Rating Page
   font-size: 1em;
   padding: 5px;
   margin: 10px 0 0 2px;
-}
-
-
-/*
-Search Results
-*/
-.results {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.results a {
-  text-decoration: none;
-  color: black;
-}
-
-.searchresult {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  text-align: center;
-  width: 100%;
-  align-items: center;
-  justify-items: center;
-  border: solid 1px;
-  border-radius: 5px;
-  padding: 10px;
-  column-rule: dotted;
-}
-
-.searchresult h3 {
-  display: block;
-  margin: 10px;
-}
-
-.searchresult img {
-  display: block;
-  height: 150px;
-}
-
-
-/*
-My Rating Page
-*/
-.profile .summary {
-  display: grid;
-  grid-auto-columns: 1fr 2fr;
-  width: 90%;
-}
-
-.profile .summary h3 {
-  text-align: center;
-  align-self: center;
-  font-size: 1.5em;
-}
-
-.profile .summary p {
-  font-size: 2em;
-  text-align: center;
-  align-self: center;
-  background-color: white;
-}
-
-.profile .summary img {
-  grid-row: 1 / span 2;
-  grid-column: 2;
-  justify-self: center;
-  align-self: center;
-  height: 90%;
-}
-
-.profile .ratelink {
-  font-size: 1em;
-  padding: 5px;
-  margin: 20px 10px;
-  justify-self: center;
-}
-
-.profile .roommateratings {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin-left: 10px;
-
-}
-
-.profile .roommateratings h4 {
-  font-family: sans-serif;
-}
-
-.profile div.gridleft {
-  background-color: gray;
-  padding: 10px;
-  border: solid gray;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-
-.profile div.comment {
-  background-color: white;
-  
-}
-
-.profile .gridleft img {
-  width: 50px;
-}
-
-.profile p.rating {
-  font-size: 1.2em;
 }
