@@ -1,20 +1,29 @@
 
 body {
-  background-color: lightgray;
-  padding: 10px;
+  background-color: #dbdbdb;
+  padding: 15px;
   margin: 25px;
+  border: solid #2514CC 5px;
+  border-radius: 5px;
 }
 
 h1 {
   text-align: center;
+  font-family: sans-serif;
+  font-size: 2.5em;
 }
 
 h2 {
   text-align: center;
+  font-family: sans-serif;
 }
 
 img {
   border-radius: 3px;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 
@@ -23,7 +32,7 @@ Page Layout
 */
 .container {
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-areas:
     "header header"
     "sidebar main"
@@ -40,6 +49,7 @@ Page Layout
 .sidebar {
   grid-area: sidebar;
   border-right: solid 1px;
+  padding: 10px;
 }
 
 .main {
@@ -60,7 +70,7 @@ Navigation Menu
 */
 nav ul {
   list-style-type: none;
-  margin: 10px 30px 10px 30px;
+  margin: 10px 30px 10px 5px;
   padding: 0;
   overflow: hidden;
   background-color: black;
@@ -79,14 +89,15 @@ nav li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-family: sans-serif;
 }
 
 nav li a:hover:not(.active) {
-  background-color: gray;
+  background-color: #47993D;
 }
 
 .active {
-  background-color: red;
+  background-color: #2514CC;
 }
 
 .search {
@@ -99,12 +110,82 @@ nav li a:hover:not(.active) {
   width: 250px;
 }
 
-.search a {
+.search button {
   float: right;
   padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
   cursor: pointer;
+}
+
+
+/*
+Sidebar
+*/
+.sidebar img {
+  width: 100%;
+  margin: 25px 0 25px 0;
+}
+
+
+/***
+Responsive
+***/
+@media screen and (max-width: 790px) {
+  /*
+  Main
+  */
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  /*
+  Navigation Bar
+  */
+  nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  nav li {
+    float: none;
+    width: 100%;
+  }
+
+  nav li a {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: solid black;
+  }
+
+  .search {
+    float: none;
+  }
+
+  .searchdiv {
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    height: 50px;
+  }
+
+  .search input {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .search button {
+    margin-right: 0;
+    margin-top: 0;
+  }
+
 }
 
 
@@ -117,8 +198,7 @@ Login Page
 }
 
 #register {
-  text-decoration: none;
-  color: blue;
+  color: black;
   font-family: sans-serif;
   margin-left: 25px;
 }
@@ -271,6 +351,7 @@ Search Results
 .searchresult h3 {
   display: block;
   margin: 10px;
+  font-family: sans-serif;
 }
 
 .searchresult img {
@@ -282,31 +363,42 @@ Search Results
 /*
 My Rating Page
 */
-.profile .summary {
-  display: grid;
-  grid-auto-columns: 1fr 2fr;
+.profile {
   width: 90%;
 }
 
+.profile .summary {
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+  justify-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
 .profile .summary h3 {
+  -webkit-margin-before: 5px;
+  -webkit-margin-after: 5px;
   text-align: center;
   align-self: center;
   font-size: 1.5em;
 }
 
 .profile .summary p {
-  font-size: 2em;
+  -webkit-margin-before: 5px;
+  -webkit-margin-after: 5px;
+  font-size: 3.5em;
   text-align: center;
   align-self: center;
-  background-color: white;
 }
 
 .profile .summary img {
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
   grid-column: 2;
   justify-self: center;
   align-self: center;
-  height: 90%;
+  height: 95%;
 }
 
 .profile .ratelink {
@@ -320,30 +412,51 @@ My Rating Page
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin-left: 10px;
-
+  grid-row-gap: 10px;
 }
 
 .profile .roommateratings h4 {
   font-family: sans-serif;
+  text-align: center;
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 0.5em;
 }
 
-.profile div.gridleft {
-  background-color: gray;
-  padding: 10px;
-  border: solid gray;
+.profile .roommateratings div.rating {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: min-content;
+  align-items: center;
+  grid-column-gap: 5px;
+  color: white;
+  background-color: #47993D;
+  padding: 15px;
+  border: solid #47993D;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  font-size: 1.2em;
+}
+
+@media screen and (max-width : 790px) {
+  .profile .roommateratings div.rating {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile .roommateratings div.rating h4 {
+  text-align: center;
 }
 
 .profile div.comment {
   background-color: white;
-  
+  padding: 15px;
+  border: solid white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.profile .gridleft img {
+.profile .rating img {
   width: 50px;
-}
-
-.profile p.rating {
-  font-size: 1.2em;
+  align-self: center;
+  justify-self: center;
 }
